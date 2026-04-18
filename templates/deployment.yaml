@@ -10,9 +10,9 @@ metadata:
     component: frontend
   annotations:
     # Appears in 'kubectl rollout history'
-    kubernetes.io/change-cause: {{ .Values.deployemnt.changeReason }}
+    kubernetes.io/change-cause: {{ .Values.deployment.changeReason }}
 spec:
-  replicas: {{ .Values.deployemnt.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     # The Deployment uses these to find and manage its Pods
     matchLabels:
@@ -32,5 +32,5 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:{{ .Values.deployemnt.imageVersion }}
+        image: nginx:{{ .Values.deployment.imageVersion }}
 
