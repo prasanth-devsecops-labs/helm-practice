@@ -1,0 +1,6 @@
+deployment:
+  replicas: "1"
+  changeReason: "installing latest version"
+  imageVersion: "latest"
+servie:
+  type: LoadBalancer
